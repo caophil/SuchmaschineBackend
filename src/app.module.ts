@@ -8,6 +8,7 @@ import { RequestModule } from './request/request.module';
 import { RequestController } from './request/request.controller';
 import { Word } from './typeorm/entities/Word';
 import { RequestService } from './request/request.service';
+import { WordLink } from './typeorm/entities/WordLink';
 
 @Module({
   imports: [ TypeOrmModule.forRoot({
@@ -17,7 +18,7 @@ import { RequestService } from './request/request.service';
     username: 'root', 
     password: 'root',
     database: 'Suchmaschiene',
-    entities: [Link, Word],
+    entities: [Link, Word, WordLink],
     synchronize: true,
   }), LinksModule, RequestModule],
   controllers: [AppController],
