@@ -4,6 +4,10 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Link } from './typeorm/entities/Link';
 import { LinksModule } from './links/links.module';
+import { RequestModule } from './request/request.module';
+import { RequestController } from './request/request.controller';
+import { Word } from './typeorm/entities/Word';
+import { RequestService } from './request/request.service';
 
 @Module({
   imports: [ TypeOrmModule.forRoot({
@@ -13,9 +17,9 @@ import { LinksModule } from './links/links.module';
     username: 'root', 
     password: 'root',
     database: 'Suchmaschiene',
-    entities: [Link],
+    entities: [Link, Word],
     synchronize: true,
-  }), LinksModule],
+  }), LinksModule, RequestModule],
   controllers: [AppController],
   providers: [AppService],
 })
