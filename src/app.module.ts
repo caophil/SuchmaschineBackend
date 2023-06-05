@@ -17,7 +17,7 @@ import { WordLink } from './typeorm/entities/WordLink';
     port: 3306,
     username: 'root', 
     password: 'root',
-    database: 'Suchmaschiene',
+    database: 'dhbw_crawler',
     entities: [Link, Word, WordLink],
     synchronize: true,
   }), LinksModule, RequestModule],

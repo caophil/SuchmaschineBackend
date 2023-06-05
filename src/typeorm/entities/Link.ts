@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 
-@Entity({name: 'links'})
+@Entity({name: 'tbl_link'})
 export class Link{
 
     @PrimaryGeneratedColumn()
@@ -11,5 +11,5 @@ export class Link{
     link: string;
 
     @Column()
-    time_stamp: Date;
+    timestamp_visited: Date;
 }

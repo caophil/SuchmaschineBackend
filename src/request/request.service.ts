@@ -54,7 +54,7 @@ export class RequestService {
         for(let element of word_ids){
             try{
                 const value = await this.wordLinkRepository.find({
-                    where:[{id_word: element}]
+                    where:[{idword: element}]
                 });
                 for (let e of value){
                     link_ids.push(e.id_link);

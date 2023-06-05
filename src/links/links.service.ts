@@ -14,11 +14,11 @@ export class LinksService {
     }
 
     createLink(link: LinkDto){
-        const newLink = this.linkRepository.create({...link, time_stamp: new Date()});
+        const newLink = this.linkRepository.create({...link, timestamp_visited: new Date()});
         return this.linkRepository.save(newLink);
     }
 
     updateLink(id: number, newlink: LinkDto){
-        return this.linkRepository.update({id}, {...newlink, time_stamp: new Date()});
+        return this.linkRepository.update({id}, {...newlink, timestamp_visited: new Date()});
     }
 }
