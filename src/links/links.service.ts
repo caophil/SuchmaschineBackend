@@ -14,7 +14,7 @@ export class LinksService {
     }
 
     createLink(link: LinkDto){
-        const newLink = this.linkRepository.create({...link, timestamp_visited: new Date()});
+        const newLink = this.linkRepository.create({...link, timestamp_visited: new Date(), visited: false});
         return this.linkRepository.save(newLink);
     }
 

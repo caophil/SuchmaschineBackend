@@ -12,4 +12,7 @@ export class Link{
 
     @Column()
     timestamp_visited: Date;
+
+    @Column()
+    visited : Boolean;
 }
