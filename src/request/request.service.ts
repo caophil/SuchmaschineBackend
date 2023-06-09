@@ -73,7 +73,9 @@ export class RequestService {
                 const value = await this.wordRepository.find({
                     where: [{word: element}]
                 });
-                word_ids.push(value[0].id);
+                for (let e of value){
+                    word_ids.push(e.id);
+                }
             }catch(err){
                 console.log(err);
                 
